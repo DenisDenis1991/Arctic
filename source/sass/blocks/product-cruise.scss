@@ -1,0 +1,29 @@
+.product-cruise {
+  position: relative;
+
+  &--ilain {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 260px;
+      height: 386px;
+      background-color: #bddefb;
+      background-image: url('../../img/pic/avпrora.jpg');
+    }
+
+    &:hover::before {
+      z-index: -3;
+    }
+  }
+
+
+}
+
+.product-cruise__box {
+  z-index: -1;
+  width: 260px;
+  height: 386px;
+}
