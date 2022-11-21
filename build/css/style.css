@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 /* stylelint-disable */
 
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
@@ -437,8 +435,8 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  font-family: "Placeholder", "Arial", sans-serif;
-  color: #000000;
+  font-family: "Montserrat", "Arial", sans-serif;
+  color: #011c40;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
@@ -447,7 +445,7 @@ html {
 body {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: #f9fbfd;
 }
 
 a {
@@ -636,37 +634,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1240px;
   margin: 0 auto;
   padding: 0 40px;
-}
-
-.product-cruise {
-  position: relative;
-}
-
-.product-cruise--ilain {
-  position: relative;
-}
-
-.product-cruise--ilain::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 260px;
-  height: 386px;
-  background-color: #bddefb;
-  background-image: url("../../img/pic/avпrora.jpg");
-}
-
-.product-cruise--ilain:hover::before {
-  z-index: -3;
-}
-
-.product-cruise__box {
-  z-index: -1;
-  width: 260px;
-  height: 386px;
 }
 
 .btn {
@@ -808,6 +778,343 @@ button,
   pointer-events: auto;
 }
 
+.product-cruise {
+  position: relative;
+  height: 386px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  justify-content: end;
+}
+
+.product-cruise:hover {
+  display: block;
+}
+
+.product-cruise:hover .product-cruise__box {
+  display: block;
+  z-index: 2;
+}
+
+.product-cruise:hover .product-cruise__add-heading {
+  display: none;
+}
+
+.product-cruise--ilain {
+  position: relative;
+}
+
+.product-cruise--ilain::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background-color: #bddefb;
+  background-image: url("./../img/pic/avrora.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.product-cruise__box {
+  display: none;
+  padding: 30px 25px;
+  max-height: 386px;
+  -webkit-box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
+  background-color: #011c40;
+}
+
+.product-cruise__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: #f9fbfd;
+}
+
+.product-cruise__item:not(:last-child) {
+  margin-bottom: 12px;
+}
+
+.product-cruise__bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.product-cruise__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+  margin-bottom: 12px;
+}
+
+.product-cruise__title {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product-cruise__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.product-cruise__button {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  color: #011c40;
+  padding: 11px 47px;
+  background-color: #f9fbfd;
+  margin-top: 25px;
+}
+
+.product-cruise__add-heading {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: #f9fbfd;
+  padding: 0 0 30px 30px;
+}
+
+.user-nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: "Montserrat", "Arial", sans-serif;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+  padding-top: 8px;
+}
+
+.user-nav__link {
+  font-weight: 500;
+  line-height: 20px;
+  color: #f9fbfd;
+}
+
+.header__box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
+}
+
+.about {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-column-gap: 88px;
+  -moz-column-gap: 88px;
+  column-gap: 88px;
+  padding: 116px 0 145px;
+}
+
+.about::after {
+  content: "";
+  display: block;
+  width: 560px;
+  height: 301px;
+  background-color: #bddefb;
+  background-image: url("./../img/pic/about.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.about__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 25px;
+  font-family: "Montserrat", "Arial", sans-serif;
+}
+
+.about__description {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.advantages {
+  position: relative;
+}
+
+.advantages::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: #e3ecf6;
+  background-image: url("./../img/pic/advantages-bg.jpg");
+}
+
+.advantages__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.advantages__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.advantages__item {
+  background-color: #f9fbfd;
+  padding: 30px 30px 45px;
+}
+
+.advantages__title {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin: 12px 0 8px;
+}
+
+.advantages__description {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.intro {
+  position: relative;
+}
+
+.intro::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  top: -80px;
+  height: 650px;
+  z-index: -1;
+  background-color: #bddefb;
+  background-image: url("../img/pic/intro-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.intro__heading {
+  margin: 0;
+  padding: 0;
+  padding-left: 95px;
+  font-family: "Montserrat", "Arial", sans-serif;
+  font-weight: 700;
+  font-size: 54px;
+  line-height: 66px;
+  color: #f9fbfd;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  margin-bottom: 10px;
+}
+
+.intro__description {
+  margin: 0;
+  padding: 0;
+  padding-left: 95px;
+  font-size: 20px;
+  line-height: 24px;
+  color: #f9fbfd;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__intro {
+  padding: 191px 0 283px;
+}
+
+.main__advantages {
+  padding: 109px 0 120px;
+}
+
+.main__nearest {
+  padding: 84px 0 120px;
+}
+
+.nearest__heading {
+  margin: 0;
+  padding: 0;
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.nearest__cruise-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 0 13px;
+}
+
+.page__header {
+  padding-top: 35px;
+}
+
 /* @mixin hover-focus {
     @media (hover: hover) {
       &:hover:not(.focus-visible) {
@@ -851,7 +1158,14 @@ button,
 
 @media (max-width: 1439px) {
   .container {
-    padding: 0 32px;
+    padding: 0 40px;
+  }
+}
+
+@media (max-width: 1239px) {
+  .nearest__cruise-list {
+    -ms-grid-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
 
@@ -883,5 +1197,15 @@ button,
 @media (hover: hover) {
   .btn:hover:not(.focus-visible) {
     opacity: 0.8;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .about::after {
+    background-image: url("./../img/pic/about@2x.jpg");
+  }
+
+  .advantages::after {
+    background-image: url("./../img/pic/advantages-bg@2x.jpg");
   }
 }

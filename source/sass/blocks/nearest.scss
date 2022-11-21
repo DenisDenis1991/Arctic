@@ -1,0 +1,21 @@
+
+.nearest__heading {
+  @include style-reset();
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.nearest__cruise-list {
+  @include list-reset();
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 0 13px;
+
+  @include vp-1240() {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

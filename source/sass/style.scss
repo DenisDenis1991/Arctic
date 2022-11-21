@@ -14,14 +14,24 @@
 @import "global/reboot";
 @import "global/utils";
 @import "global/container";
-@import "blocks/product-cruise";
-
 // Blocks
 // ---------------------------------
 
 @import "blocks/btn";
 @import "blocks/modal";
-
+@import "blocks/product-cruise";
+@import "blocks/user-nav";
+@import "blocks/header";
+@import "blocks/about";
+@import "blocks/advantages";
+@import "blocks/contact";
+@import "blocks/footer";
+@import "blocks/form";
+@import "blocks/intro";
+@import "blocks/main";
+@import "blocks/nearest";
+@import "blocks/social";
+@import "blocks/page";
 // ---------------------------------
 
 // ❗❗❗ запрещено использовать изображения в css, касается как jpg \ png, так и svg

@@ -1,0 +1,38 @@
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  column-gap: 88px;
+  padding: 116px 0 145px;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 560px;
+    height: 301px;
+    background-color: $pale-blue;
+    background-image: url("./../img/pic/about.jpg");
+    background-repeat: no-repeat;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("./../img/pic/about@2x.jpg");
+    }
+  }
+}
+
+.about__heading {
+  @include style-reset();
+  font-weight: 600;
+  font-size: 28px;
+  line-height: 42px;
+  margin-bottom: 25px;
+  font-family: $ff-montserrat;
+}
+
+.about__description {
+  @include style-reset();
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
