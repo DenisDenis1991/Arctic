@@ -1,0 +1,60 @@
+.contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 120px 0;
+  align-items: center;
+  gap: 100px;
+}
+
+.contact__map {
+  &::after {
+    content: "";
+    display: block;
+    width: 560px;
+    height: 306px;
+    background-color: $sugar-cane;
+    background-image: url("../img/pic/map.webp");
+    background-repeat: no-repeat;
+  }
+}
+
+.contact__description {
+  @include style-reset();
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 35px;
+}
+
+.contact__address {
+  font-style: normal;
+  margin-bottom: 25px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 22px;
+    background-image: url("../img/sprite/mark.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.contact__tel {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 18px;
+    height: 22px;
+    background-image: url("../img/sprite/phone.svg");
+    background-repeat: no-repeat;
+  }
+}

@@ -1,0 +1,124 @@
+.form {
+  position: relative;
+  padding: 50px 0 55px;
+
+  & form {
+    background-color: $tangora;
+    box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 50px;
+    margin-left: 125px;
+
+    & input {
+      padding: 11px 16px;
+      background-color: $alice-blue;
+      margin-bottom: 19px;
+      width: 100%;
+
+      &::placeholder {
+        font-size: 14px;
+        line-height: 21px;
+        color: rgba(1, 28, 64, 0.7);
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 555px;
+    position: absolute;
+    background-color: $pale-blue;
+    background-image: url("../img/pic/form-bg.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.form__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0 60px 0 42px;
+  align-items: center;
+}
+
+.form__box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__heading {
+  @include style-reset();
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin-bottom: 8px;
+}
+
+.form__description {
+  @include style-reset();
+  font-size: 18px;
+  line-height: 27px;
+  margin-inline-start: 1em;
+  align-self: flex-start;
+}
+
+.form__title {
+  @include style-reset();
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 27px;
+  color: $alice-blue;
+  margin-bottom: 25px;
+}
+
+.form__approv label {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 30px;
+}
+
+.form__approv-icon {
+  width: 18px;
+  height: 18px;
+  display: inline-block;
+  background-color: $alice-blue;
+  position: relative;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 10px;
+    height: 6px;
+    position: absolute;
+    top: 6px;
+    left: 4px;
+    background-image: url("../img/svg/check.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
+
+.form__approv-label {
+  font-size: 10px;
+  line-height: 13px;
+  color: $alice-blue;
+  display: inline-block;
+}
+
+.form__btn {
+  border: none;
+  background-color: $alice-blue;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  text-align: center;
+  padding: 11px 10px;
+}
