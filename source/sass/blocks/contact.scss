@@ -9,6 +9,10 @@
     padding: 100px 0;
     gap: 30px;
   }
+
+  @include vp-767() {
+    grid-template-columns: 1fr;
+  }
 }
 
 .contact__map {
