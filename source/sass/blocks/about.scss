@@ -5,18 +5,30 @@
   column-gap: 88px;
   padding: 116px 0 145px;
 
+  @include vp-1023() {
+    column-gap: 21px;
+    padding: 85px 0 92px;
+    align-items: flex-start;
+  }
+
   &::after {
     content: "";
     display: block;
     width: 560px;
     height: 301px;
     background-color: $pale-blue;
-    background-image: url("./../img/pic/about.jpg");
+    background-image: url("./../img/pic/about.webp");
     background-repeat: no-repeat;
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("./../img/pic/about@2x.jpg");
+      background-image: url("./../img/pic/about@2x.webp");
+    }
+
+    @include vp-1023() {
+      margin-top: 8px;
+      width: 324px;
+      height: 174px;
     }
   }
 }
@@ -28,6 +40,12 @@
   line-height: 42px;
   margin-bottom: 25px;
   font-family: $ff-montserrat;
+
+  @include vp-1023() {
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 16px;
+  }
 }
 
 .about__description {

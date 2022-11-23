@@ -4,10 +4,27 @@
   display: flex;
   gap: 33px;
   padding-top: 8px;
+
+  @include vp-1023() {
+    padding-top: 0;
+    gap: 24px;
+  }
 }
 
 .user-nav__link {
   font-weight: 500;
   line-height: 20px;
   color: $alice-blue;
+
+  @include vp-1023() {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  &--footer {
+    @include vp-1023() {
+      font-size: 12px;
+      line-height: 15px;
+    }
+  }
 }

@@ -1,11 +1,31 @@
 .main__intro {
   padding: 191px 0 283px;
+
+  @include vp-1023() {
+    padding: 212px 0 283px;
+  }
 }
 
 .main__advantages {
   padding: 109px 0 120px;
+
+  @include vp-1023() {
+    padding: 92px 0 99px;
+  }
 }
 
 .main__nearest {
   padding: 84px 0 120px;
+
+  @include vp-1023() {
+    padding: 89px 0 101px;
+  }
+}
+
+.main__form {
+  padding: 50px 0 55px;
+
+  @include vp-1023() {
+    padding: 86px 0 100px;
+  }
 }

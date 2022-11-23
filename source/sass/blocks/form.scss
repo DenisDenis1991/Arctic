@@ -1,29 +1,5 @@
 .form {
   position: relative;
-  padding: 50px 0 55px;
-
-  & form {
-    background-color: $tangora;
-    box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 45px 50px;
-    margin-left: 125px;
-
-    & input {
-      padding: 11px 16px;
-      background-color: $alice-blue;
-      margin-bottom: 19px;
-      width: 100%;
-
-      &::placeholder {
-        font-size: 14px;
-        line-height: 21px;
-        color: rgba(1, 28, 64, 0.7);
-      }
-    }
-  }
 
   &::after {
     content: "";
@@ -32,11 +8,55 @@
     height: 555px;
     position: absolute;
     background-color: $pale-blue;
-    background-image: url("../img/pic/form-bg.webp");
+
     background-repeat: no-repeat;
     background-size: cover;
     top: 0;
     z-index: -1;
+
+    @media (min-width: 1024px) {
+      background-image: url("../img/pic/form-bg.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("./../img/pic/form-bg@2x.webp");
+      }
+    }
+
+    @include vp-1023() {
+      background-image: url("../img/pic/form-bg-tablet.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("./../img/pic/form-bg-tablet@2x.webp");
+      }
+    }
+  }
+}
+
+form {
+  background-color: $tangora;
+  box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 45px 50px;
+  margin-left: 125px;
+
+  @include vp-1023() {
+    margin: 0 137px;
+    padding: 45px 50px 50px;
+  }
+
+  & input {
+    padding: 11px 16px;
+    background-color: $alice-blue;
+    margin-bottom: 19px;
+    width: 100%;
+
+    &::placeholder {
+      font-size: 14px;
+      line-height: 21px;
+      color: rgba(1, 28, 64, 0.7);
+    }
   }
 }
 
@@ -45,6 +65,12 @@
   grid-template-columns: 1fr 1fr;
   padding: 0 60px 0 42px;
   align-items: center;
+
+  @include vp-1023() {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .form__box {
@@ -59,6 +85,11 @@
   font-size: 40px;
   line-height: 60px;
   margin-bottom: 8px;
+
+  @include vp-1023() {
+    font-size: 34px;
+    line-height: 51px;
+  }
 }
 
 .form__description {
@@ -67,6 +98,14 @@
   line-height: 27px;
   margin-inline-start: 1em;
   align-self: flex-start;
+  max-width: 352px;
+
+  @include vp-1023() {
+    margin-inline-start: 0;
+    text-align: center;
+    align-self: center;
+    margin-bottom: 50px;
+  }
 }
 
 .form__title {
@@ -91,19 +130,19 @@
   display: inline-block;
   background-color: $alice-blue;
   position: relative;
+}
 
-  &::before {
-    content: "";
-    display: block;
-    width: 10px;
-    height: 6px;
-    position: absolute;
-    top: 6px;
-    left: 4px;
-    background-image: url("../img/svg/check.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-  }
+input[type="checkbox"]:checked + .form__approv-icon::before {
+  content: "";
+  display: block;
+  width: 10px;
+  height: 6px;
+  position: absolute;
+  top: 6px;
+  left: 4px;
+  background-image: url("../img/svg/check.svg");
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .form__approv-label {

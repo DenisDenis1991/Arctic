@@ -10,10 +10,26 @@
     height: 650px;
     z-index: -1;
     background-color: $pale-blue;
-    background-image: url("../img/pic/intro-bg.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+
+    @media (min-width: 1024px) {
+      background-image: url("../img/pic/intro-bg.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/pic/intro-bg.webp");
+      }
+    }
+
+    @include vp-1023() {
+      filter: none;
+      background-image: url("../img/pic/intro-bg-tablet.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("./../img/pic/intro-bg-tablet@2x.webp");
+      }
+    }
   }
 }
 
@@ -27,6 +43,12 @@
   color: $alice-blue;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
   margin-bottom: 10px;
+
+  @include vp-1023() {
+    font-size: 50px;
+    line-height: 61px;
+    padding-left: 0;
+  }
 }
 
 .intro__description {
@@ -36,4 +58,10 @@
   line-height: 24px;
   color: $alice-blue;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  @include vp-1023() {
+    font-size: 18px;
+    line-height: 22px;
+    padding-left: 0;
+  }
 }

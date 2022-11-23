@@ -6,6 +6,11 @@
   line-height: 42px;
   text-align: center;
   margin-bottom: 50px;
+
+  @include vp-1023() {
+    font-size: 26px;
+    line-height: 39px;
+  }
 }
 
 .nearest__cruise-list {

@@ -39,6 +39,11 @@
   height: 386px;
   box-shadow: 0 4px 35px rgba(1, 28, 64, 0.15);
   background-color: $tangora;
+
+
+  @include vp-1023() {
+    padding: 30px 35px 33px;
+  }
 }
 
 .product-cruise__list {
@@ -96,4 +101,8 @@
   line-height: 27px;
   color: $alice-blue;
   padding: 0 0 22px 31px;
+
+  @include vp-1023() {
+    padding: 0 0 27px 36px;
+  }
 }
