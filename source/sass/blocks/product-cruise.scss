@@ -44,6 +44,10 @@
   @include vp-1023() {
     padding: 30px 35px 33px;
   }
+
+  @include vp-767() {
+    padding: 30px 24px 33px;
+  }
 }
 
 .product-cruise__list {
@@ -104,5 +108,9 @@
 
   @include vp-1023() {
     padding: 0 0 27px 36px;
+  }
+
+  @include vp-767() {
+    padding: 0 0 17px 24px;
   }
 }

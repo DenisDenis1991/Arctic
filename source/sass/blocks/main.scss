@@ -4,6 +4,10 @@
   @include vp-1023() {
     padding: 212px 0 283px;
   }
+
+  @include vp-767() {
+    padding: 126px 0 187px;
+  }
 }
 
 .main__advantages {
@@ -11,6 +15,10 @@
 
   @include vp-1023() {
     padding: 92px 0 99px;
+  }
+
+  @include vp-767() {
+    padding: 57px 0 66px;
   }
 }
 
@@ -20,6 +28,10 @@
   @include vp-1023() {
     padding: 89px 0 101px;
   }
+
+  @include vp-767() {
+    padding: 57px 0 66px;
+  }
 }
 
 .main__form {
@@ -27,5 +39,9 @@
 
   @include vp-1023() {
     padding: 86px 0 100px;
+  }
+
+  @include vp-767() {
+    padding: 56px 0 66px;
   }
 }

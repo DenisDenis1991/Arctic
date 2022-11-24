@@ -1,9 +1,38 @@
+.user-nav {
+  @include vp-767() {
+    display: none;
+  }
+
+  &--menu {
+    @include vp-767() {
+      display: block;
+      background-color: rgba(0, 43, 102, 0.5);
+      width: calc(100% + 15px);
+      left: -15px;
+      align-items: flex-end;
+      z-index: 20;
+      position: absolute;
+      top: 0;
+      height: 100%;
+    }
+  }
+
+  &--footer {
+    @include vp-767() {
+      position: inherit;
+      background-color: transparent;
+      padding: 0;
+    }
+  }
+}
+
 .user-nav__list {
   @include list-reset();
   font-family: $ff-montserrat;
   display: flex;
   gap: 33px;
   padding-top: 8px;
+  position: relative;
 
   @include vp-1023() {
     padding-top: 0;
@@ -11,8 +40,28 @@
   }
 
   @include vp-767() {
-    flex-direction: column;
+    display: none;
+  }
 
+  &--menu {
+    @include vp-767() {
+      display: flex;
+      margin: 0 0 0 16px;
+      flex-direction: column;
+      gap: 0;
+      width: calc(100% - 51px);
+      left: 35px;
+      padding: 75px 0 10px 14px;
+      height: 100%;
+      background-color: $alice-blue;
+    }
+  }
+
+  &--footer {
+    @include vp-767() {
+      display: block;
+      margin: 0;
+    }
   }
 }
 
@@ -20,16 +69,48 @@
   font-weight: 500;
   line-height: 20px;
   color: $alice-blue;
+  padding: 5px 0;
 
   @include vp-1023() {
     font-size: 14px;
     line-height: 17px;
   }
 
+  @include vp-767() {
+    padding: 10px;
+    display: block;
+    font-size: 18px;
+    line-height: 22px;
+    color: $tangora;
+  }
+
   &--footer {
     @include vp-1023() {
       font-size: 12px;
       line-height: 15px;
+    }
+
+    @include vp-767() {
+      font-size: 12px;
+      line-height: 15px;
+      padding: 5px 0;
+    }
+  }
+}
+
+.user-nav__item {
+  @include vp-767() {
+    margin-bottom: 8px;
+  }
+}
+
+.js-menu {
+  padding-left: 35px;
+  word-break: break-all;
+
+  & svg {
+    @include vp-767() {
+      fill: $tangora;
     }
   }
 }
