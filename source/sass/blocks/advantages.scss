@@ -10,12 +10,12 @@
     width: 100%;
     height: 100%;
     background-color: $solitude;
-    background-image: url("./../img/pic/advantages-bg.jpg");
+    background-image: url("./../img/pic/advantages-bg.webp");
     background-repeat: no-repeat;
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("./../img/pic/advantages-bg@2x.jpg");
+      background-image: url("./../img/pic/advantages-bg@2x.webp");
     }
   }
 }
@@ -63,6 +63,10 @@
 
   @include vp-1023() {
     padding: 26px 16px 22px 20px;
+  }
+
+  &--all {
+    padding: 30px 45px 45px 30px;
   }
 }
 
