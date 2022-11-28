@@ -10,26 +10,39 @@
   </head>
   <body>
     <div class="wrapper">
-      <header>
-        <div class="container"></div>
+      <header class="page__header header">
+        <div class="container">
+          <div class="header__box">
+            <div class="header__box-mobile">
+            <a class="header__logo">
+              <svg width="70" height="38">
+                <use xlink:href="img/sprite.svg#logo"></use>
+              </svg>
+            </a>
+            <button class="header__button header__button--close" aria-label="Меню"></button>
+          </div>
+            <nav class="header__nav user-nav">
+              <ul class="user-nav__list">
+                <li class="user-nav__item">
+                  <a class="user-nav__link" href="#advantages">Преимущества</a>
+                </li>
+                <li class="user-nav__item">
+                  <a class="user-nav__link" href="#direction">Направления</a>
+                </li>
+                <li class="user-nav__item">
+                  <a class="user-nav__link" href="#nearest">Ближайшие круизы</a>
+                </li>
+                <li class="user-nav__item">
+                  <a class="user-nav__link" href="#contact">Контакты</a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+        </div>
       </header>
       <main>
-        <section class="intro">
-          <div class="container">
-            <h1>Разводящая страница</h1>
-            <p>На многостраничных сайтах используйте эту страницу для создания списков всех страниц и ссылок на них.</p>
-            <p>Это делается для удобства тестирования и для быстрого доступа к нужной странице.</p>
-            <h2>Пример</h2>
-            <ol>
-              <li>
-                <a href="index.html">Главная — index.html</a>
-              </li>
-              <li>
-                <a href="#">Название страницы (состояние страницы, если отдельное) — ссылка на страницу.</a>
-              </li>
-            </ol>
-          </div>
-        </section>
+
       </main>
       <footer>
         <div class="container"></div>

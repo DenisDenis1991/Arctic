@@ -1,7 +1,72 @@
+.header {
+  @include vp-767() {
+
+    // background-color: rgba(0, 43, 102, 0.5);
+  }
+}
+
 .header__box {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+
+  @include vp-1439 {
+    padding: 0 60px;
+  }
+
+  @include vp-1023 {
+    padding: 0 45px;
+  }
+
+  @include vp-767 {
+    padding: 0 15px;
+    width: 100%;
+  }
+
+  &--menu {
+    @include vp-767 {
+      // open-menu____________________
+      padding: 0 0 0 35px;
+      flex-direction: column;
+      background-color: rgba(0, 43, 102, 0.5);
+      align-items: flex-end;
+      height: 100vh;
+      justify-content: normal;
+      position: absolute;
+      z-index: 9;
+      min-width: 320px;
+    }
+
+    .header__box-mobile {
+      @include vp-767() {
+        padding:20px 15px 0;
+        background: $alice-blue;
+
+      }
+    }
+
+    & svg {
+      @include vp-767() {
+        width: 42px;
+        height: 22px;
+        fill: $tangora;
+      }
+    }
+  }
+
+  .header__box-mobile {
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+    padding-top: 20px;
+    width: 100%;
+  }
+
+
 
   & svg {
     fill: $alice-blue;
@@ -9,11 +74,6 @@
     @include vp-1023() {
       width: 38px;
       height: 20px;
-    }
-
-    @include vp-767() {
-      width: 42px;
-      height: 22px;
     }
   }
 }
@@ -23,8 +83,8 @@
   display: none;
 
   @include vp-767() {
-    position: absolute;
-    right: 15px;
+    // position: absolute;
+    // right: 15px;
     display: block;
     margin-top: 5px;
     border: none;

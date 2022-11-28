@@ -14,19 +14,16 @@ window.addEventListener('DOMContentLoaded', () => {
   // Modules
   // ---------------------------------
 
-  // const openMenu = document.querySelector('.header__button');
-  // const userNav = document.querySelector('.user-nav');
-  // const navList = document.querySelector('.user-nav__list');
-  // const headerBox = document.querySelector('.header__box');
+  const openMenu = document.querySelector('.header__button');
+  const userNav = document.querySelector('.user-nav');
+  const headerBox = document.querySelector('.header__box');
 
-  // openMenu.addEventListener('click', (evt) => {
-  //   evt.preventDefault();
-  //   openMenu.classList.toggle('header__button--close');
-  //   userNav.classList.toggle('user-nav--menu');
-  //   navList.classList.toggle('user-nav__list--menu');
-  //   navList.tabIndex = '1';
-  //   headerBox.classList.toggle('js-menu');
-  // });
+  openMenu.addEventListener('click', (evt) => {
+    evt.preventDefault();
+    openMenu.classList.toggle('header__button--close');
+    userNav.classList.toggle('user-nav--menu');
+    headerBox.classList.toggle('header__box--menu');
+  });
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана
