@@ -3,7 +3,7 @@
   grid-template-columns: 1fr 1fr;
   padding: 120px 0;
   align-items: center;
-  gap: 100px;
+  gap: 43px;
 
   @include vp-1023() {
     padding: 100px 0;
@@ -11,19 +11,37 @@
   }
 
   @include vp-767() {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr;
     flex-direction: column-reverse;
-    padding: 57px 0 65px;
+    padding: 59px 0 65px;
     gap: 35px;
   }
 }
 
+
 .contact__map {
+  width: 100%;
+  min-width: 290px;
+  height: 304px;
+  position: relative;
+
+  @include vp-1023 {
+    height: 334px;
+  }
+
+  @include vp-767 {
+    order: 1;
+    height: 316px;
+  }
+
+
   &::after {
     content: "";
     display: block;
-    width: 560px;
-    height: 306px;
+    width: 100%;
+    max-width: 560px;
+    height: 304px;
     background-color: $sugar-cane;
     background-size: cover;
     background-repeat: no-repeat;
@@ -32,7 +50,7 @@
     top: 0;
 
     @media (min-width: 1024px) {
-      background-image: url("../img/pic/map.webp");
+      background-image: url("./../img/pic/map.webp");
 
       @media (min-resolution: 2dppx) {
         background-image: url("./../img/pic/map@2x.webp");
@@ -40,22 +58,30 @@
     }
 
     @include vp-1023() {
-      width: 324px;
-      height: 335px;
-      background-image: url("../img/pic/map-tablet.webp");
+      width: 100%;
+      height: 334px;
+      background-image: url("./../img/pic/map-tablet.webp");
 
       @media (min-resolution: 2dppx) {
         background-image: url("./../img/pic/map-tablet@2x.webp");
-        width: 324px;
+        width: 100%;
         height: 335px;
       }
     }
 
     @include vp-767() {
-      min-width: 290px;
       width: 100%;
+      min-width: auto;
       height: 316px;
     }
+  }
+}
+
+.contact__box {
+  margin-left: 56px;
+
+  @include vp-1023 {
+    margin-left: 0;
   }
 }
 
@@ -84,7 +110,7 @@
     display: block;
     width: 18px;
     height: 22px;
-    background-image: url("../img/sprite/mark.svg");
+    background-image: url("./../img/sprite/mark.svg");
     background-repeat: no-repeat;
 
     @include vp-1023() {
@@ -110,7 +136,7 @@
     display: block;
     width: 18px;
     height: 22px;
-    background-image: url("../img/sprite/phone.svg");
+    background-image: url("./../img/sprite/phone.svg");
     background-repeat: no-repeat;
 
     @include vp-1023() {

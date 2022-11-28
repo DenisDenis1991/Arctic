@@ -1,5 +1,14 @@
 .advantages {
   position: relative;
+  padding: 109px 0 120px;
+
+  @include vp-1023() {
+    padding: 92px 0 99px;
+  }
+
+  @include vp-767() {
+    padding: 57px 0 66px;
+  }
 
   &::after {
     content: "";

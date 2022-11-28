@@ -1,3 +1,15 @@
+.nearest {
+  padding: 84px 0 120px;
+
+  @include vp-1023() {
+    padding: 89px 0 101px;
+  }
+
+  @include vp-767() {
+    padding: 57px 0 66px;
+  }
+}
+
 .nearest__heading {
   @include style-reset();
   font-weight: 600;
@@ -39,3 +51,31 @@
     margin: 0 10px;
   }
 }
+
+.nearest__cruise-item:focus-within {
+  outline: 3px solid $color-neon-blue;
+
+  .product-cruise {
+    display: block;
+  }
+
+  .product-cruise__box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .product-cruise__add-heading {
+    display: none;
+  }
+
+  .product-cruise__img {
+    display: none;
+  }
+}
+

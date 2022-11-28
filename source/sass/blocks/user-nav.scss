@@ -3,28 +3,9 @@
     display: none;
   }
 
-  &--menu {
-    @include vp-767() {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-
-    .user-nav__list {
-      @include vp-767() {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        background-color: $alice-blue;
-        padding: 75px 30px 0 15px;
-        height: 100%;
-        width: 100%;
-      }
-    }
-  }
-
   &--footer {
     @include vp-767() {
+      display: block;
       position: inherit;
       background-color: transparent;
       padding: 0;
@@ -38,11 +19,14 @@
   display: flex;
   gap: 33px;
   padding-top: 8px;
+  flex-wrap: wrap;
   position: relative;
+  max-width: 800px;
 
   @include vp-1023() {
     padding-top: 0;
     gap: 24px;
+    max-width: 600px;
   }
 
   @include vp-767 {
@@ -83,10 +67,19 @@
     }
 
     @include vp-767() {
+      padding: 5px 0;
       font-size: 12px;
       line-height: 15px;
-      padding: 5px 0;
+      color: $alice-blue;
     }
+  }
+
+  &:focus {
+    opacity: 0.3;
+  }
+
+  &:hover {
+    opacity: 0.5;
   }
 }
 
