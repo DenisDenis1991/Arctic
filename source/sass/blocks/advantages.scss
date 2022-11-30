@@ -64,18 +64,14 @@
   @include vp-767() {
     grid-template-columns: 1fr;
   }
-}
 
-.advantages__item {
-  background-color: $alice-blue;
-  padding: 30px 30px 45px;
+  li {
+    background-color: $alice-blue;
+    padding: 30px 30px 45px;
 
-  @include vp-1023() {
-    padding: 26px 16px 22px 20px;
-  }
-
-  &--all {
-    padding: 30px 45px 45px 30px;
+    @include vp-1023() {
+      padding: 26px 16px 22px 20px;
+    }
   }
 }
 

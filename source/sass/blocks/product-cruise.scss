@@ -58,10 +58,10 @@
 .product-cruise__list {
   @include list-reset();
   color: $alice-blue;
-}
 
-.product-cruise__item:not(:last-child) {
-  margin-bottom: 12px;
+  & li:not(:last-child) {
+    margin-bottom: 12px;
+  }
 }
 
 .product-cruise__heading {

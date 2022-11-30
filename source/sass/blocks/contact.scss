@@ -77,16 +77,10 @@
   }
 }
 
-.contact__box {
-  margin-left: 56px;
-
-  @include vp-1023 {
-    margin-left: 0;
-  }
-}
 
 .contact__description {
   @include style-reset();
+  margin-left: 56px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -94,6 +88,7 @@
 
   @include vp-1023() {
     margin-bottom: 27px;
+    margin-left: 0;
   }
 }
 
@@ -104,6 +99,7 @@
   grid-template-columns: min-content 1fr;
   align-items: center;
   gap: 10px;
+  margin-left: 56px;
 
   &::before {
     content: "";
@@ -122,6 +118,7 @@
     font-size: 16px;
     line-height: 24px;
     align-items: flex-start;
+    margin-left: 0;
   }
 }
 
@@ -130,6 +127,11 @@
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-left: 56px;
+
+  @include vp-1023() {
+    margin-left: 0;
+  }
 
   &::before {
     content: "";

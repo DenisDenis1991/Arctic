@@ -840,7 +840,7 @@ button,
   color: #f9fbfd;
 }
 
-.product-cruise__item:not(:last-child) {
+.product-cruise__list li:not(:last-child) {
   margin-bottom: 12px;
 }
 
@@ -1040,13 +1040,9 @@ button,
   gap: 40px;
 }
 
-.advantages__item {
+.advantages__list li {
   background-color: #f9fbfd;
   padding: 30px 30px 45px;
-}
-
-.advantages__item--all {
-  padding: 30px 45px 45px 30px;
 }
 
 .advantages__title {
@@ -1098,13 +1094,10 @@ button,
   top: 0;
 }
 
-.contact__box {
-  margin-left: 56px;
-}
-
 .contact__description {
   margin: 0;
   padding: 0;
+  margin-left: 56px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
@@ -1124,6 +1117,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 10px;
+  margin-left: 56px;
 }
 
 .contact__address::before {
@@ -1144,6 +1138,7 @@ button,
   -ms-flex-align: center;
   align-items: center;
   gap: 10px;
+  margin-left: 56px;
 }
 
 .contact__tel::before {
@@ -1185,7 +1180,7 @@ button,
 
 .form {
   position: relative;
-  padding: 50px 0 55px;
+  padding: 48px 0 55px;
 }
 
 .form::after {
@@ -1201,7 +1196,7 @@ button,
   z-index: -1;
 }
 
-form {
+.form form {
   background-color: #011c40;
   -webkit-box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
   box-shadow: 0 4px 45px rgba(1, 28, 64, 0.15);
@@ -1219,38 +1214,38 @@ form {
   margin-left: 125px;
 }
 
-form input {
+.form__contact input {
   padding: 11px 16px;
   background-color: #f9fbfd;
   margin-bottom: 19px;
   width: 100%;
 }
 
-form input::-webkit-input-placeholder {
+.form__contact input::-webkit-input-placeholder {
   font-size: 14px;
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
-form input::-moz-placeholder {
+.form__contact input::-moz-placeholder {
   font-size: 14px;
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
-form input:-ms-input-placeholder {
+.form__contact input:-ms-input-placeholder {
   font-size: 14px;
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
-form input::-ms-input-placeholder {
+.form__contact input::-ms-input-placeholder {
   font-size: 14px;
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
 }
 
-form input::placeholder {
+.form__contact input::placeholder {
   font-size: 14px;
   line-height: 21px;
   color: rgba(1, 28, 64, 0.7);
@@ -1267,26 +1262,13 @@ form input::placeholder {
   align-items: center;
 }
 
-.form__box {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
 .form__heading {
   margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 40px;
   line-height: 60px;
-  margin-bottom: 8px;
+  margin: 0 0 8px 18px;
 }
 
 .form__description {
@@ -1604,6 +1586,10 @@ input[type=checkbox]:focus + .form__approv-icon {
     max-width: 600px;
   }
 
+  .user-nav__list--footer {
+    max-width: 500px;
+  }
+
   .user-nav__link {
     font-size: 14px;
     line-height: 17px;
@@ -1659,7 +1645,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     gap: 29px;
   }
 
-  .advantages__item {
+  .advantages__list li {
     padding: 26px 16px 22px 20px;
   }
 
@@ -1701,12 +1687,9 @@ input[type=checkbox]:focus + .form__approv-icon {
     background-image: url("./../img/pic/map-tablet.webp");
   }
 
-  .contact__box {
-    margin-left: 0;
-  }
-
   .contact__description {
     margin-bottom: 27px;
+    margin-left: 0;
   }
 
   .contact__address::before {
@@ -1719,6 +1702,11 @@ input[type=checkbox]:focus + .form__approv-icon {
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .contact__tel {
+    margin-left: 0;
   }
 
   .contact__tel::before {
@@ -1747,7 +1735,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     height: 100%;
   }
 
-  form {
+  .form form {
     margin: 0 137px;
     padding: 45px 50px 50px;
   }
@@ -1766,16 +1754,17 @@ input[type=checkbox]:focus + .form__approv-icon {
   .form__heading {
     font-size: 34px;
     line-height: 51px;
+    margin: 0 0 8px 0;
   }
 
   .form__description {
-    -webkit-margin-start: 0;
-    margin-inline-start: 0;
     text-align: center;
     -ms-flex-item-align: center;
     -ms-grid-row-align: center;
     align-self: center;
     margin-bottom: 50px;
+    -webkit-margin-start: 1.9em;
+    margin-inline-start: 1.9em;
   }
 
   .intro {
@@ -1966,7 +1955,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     height: 100%;
   }
 
-  .header__box--menu .user-nav .user-nav__list {
+  .header__box--menu .user-nav__list {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2103,17 +2092,17 @@ input[type=checkbox]:focus + .form__approv-icon {
   }
 
   .form {
-    padding: 56px 0 63px;
+    padding: 59px 0 61px;
   }
 
-  form {
+  .form form {
     margin: 0;
     padding: 34px 29px 40px;
     width: 100%;
   }
 
-  form input {
-    margin-bottom: 19px;
+  .form__contact input {
+    margin-bottom: 18px;
   }
 
   .form__heading {
@@ -2129,6 +2118,8 @@ input[type=checkbox]:focus + .form__approv-icon {
     line-height: 22px;
     text-align: center;
     margin-bottom: 33px;
+    -webkit-margin-start: 0;
+    margin-inline-start: 0;
   }
 
   .form__title {
