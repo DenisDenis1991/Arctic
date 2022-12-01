@@ -31,6 +31,7 @@
 
   @include vp-767 {
     display: none;
+    max-width: 100%;
   }
 
   &--footer {

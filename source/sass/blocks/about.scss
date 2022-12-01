@@ -2,7 +2,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  column-gap: 88px;
+  column-gap: 40px;
   padding: 116px 0 145px;
 
   @include vp-1023() {
@@ -15,32 +15,19 @@
     grid-template-columns: 1fr;
     padding: 50px 0 86px;
   }
+}
 
-  &::after {
-    content: "";
-    display: block;
-    width: 560px;
-    height: 301px;
-    background-color: $pale-blue;
-    background-image: url("./../img/pic/about.webp");
-    background-repeat: no-repeat;
-    background-size: contain;
+.about__img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("./../img/pic/about@2x.webp");
-    }
+  @include vp-1023 {
+    margin-top: 8px;
+  }
 
-    @include vp-1023() {
-      margin-top: 8px;
-      width: 324px;
-      height: 174px;
-    }
-
-    @include vp-767() {
-      width: 288px;
-      height: 155px;
-      margin-top: 43px;
-    }
+  @include vp-767 {
+    margin-top: 42px;
   }
 }
 

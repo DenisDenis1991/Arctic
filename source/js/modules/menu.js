@@ -14,15 +14,15 @@ const initJs = () => {
 
 const openMenu = () => {
   toggleMenu.classList.add('header__button--close');
-  introSection.style.paddingTop = '173px';
+  introSection.style.marginTop = '48px';
   headerBox.classList.add('header__box--menu');
   scrollLock.disableScrolling();
   window.addEventListener('click', onWindowClick);
 };
 
 const closeMenu = () => {
-  introSection.style.paddingTop = '126px';
   toggleMenu.classList.remove('header__button--close');
+  introSection.style.marginTop = '0';
   headerBox.classList.remove('header__box--menu');
   scrollLock.enableScrolling();
   window.removeEventListener('click', onWindowClick);

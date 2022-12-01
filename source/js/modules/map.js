@@ -1,6 +1,6 @@
 const map = () => ymaps.ready(() => {
   let myMap = new ymaps.Map('map', {
-    center: [59.937595, 30.322805],
+    center: [59.938788, 30.323126],
     zoom: 16,
     controls: [
       'zoomControl', // Ползунок масштаба
