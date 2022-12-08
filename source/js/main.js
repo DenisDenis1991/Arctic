@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initMenu();
 
   const input = document.getElementsByName('phone');
-
+  input.style.minlength = '11';
   const prefixNumber = (str) => {
     if (str === '7') {
       return '7 (';
@@ -33,7 +33,6 @@ window.addEventListener('DOMContentLoaded', () => {
     }
     return '7 (';
   };
-
 
   input.forEach((element) => element.addEventListener('input', () => {
     const value = element.value.replace(/\D+/g, '');
@@ -65,7 +64,6 @@ window.addEventListener('DOMContentLoaded', () => {
       }
       result += value[i];
     }
-    //
     element.value = result;
   })
   );

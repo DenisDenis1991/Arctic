@@ -58,6 +58,8 @@
 .product-cruise__list {
   @include list-reset();
   color: $alice-blue;
+  max-height: 216px;
+  overflow: scroll;
 
   & li:not(:last-child) {
     margin-bottom: 12px;

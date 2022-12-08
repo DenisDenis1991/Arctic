@@ -14,7 +14,7 @@ const initJs = () => {
 
 const openMenu = () => {
   toggleMenu.classList.add('header__button--close');
-  introSection.style.marginTop = '48px';
+
   headerBox.classList.add('header__box--menu');
   scrollLock.disableScrolling();
   window.addEventListener('click', onWindowClick);

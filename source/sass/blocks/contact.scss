@@ -80,11 +80,10 @@
 
 .contact__description {
   @include style-reset();
-  margin-left: 56px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin-bottom: 32px;
+  margin: 10px 0 32px 56px;
 
   @include vp-1023() {
     margin-bottom: 27px;
@@ -128,6 +127,7 @@
   align-items: center;
   gap: 10px;
   margin-left: 56px;
+  padding-bottom: 10px;
 
   @include vp-1023() {
     margin-left: 0;

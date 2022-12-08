@@ -14,7 +14,8 @@
     content: "";
     display: block;
     width: 100%;
-    height: 555px;
+    min-height: 555px;
+    height: 100%;
     position: absolute;
     background-color: $pale-blue;
 
@@ -48,11 +49,12 @@
     flex-direction: column;
     justify-content: center;
     padding: 45px 50px;
-    margin-left: 125px;
+    margin-top: 5px;
 
     @include vp-1023() {
       margin: 0 137px;
       padding: 45px 50px 50px;
+      margin-top: 0;
     }
 
     @include vp-767() {
@@ -84,7 +86,7 @@
 
 .form__wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 403px;
   padding: 0 60px 0 42px;
   align-items: center;
 

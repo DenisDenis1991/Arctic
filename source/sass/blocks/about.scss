@@ -1,9 +1,9 @@
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  align-items: center;
   column-gap: 40px;
   padding: 116px 0 145px;
+  align-items: flex-start;
 
   @include vp-1023() {
     column-gap: 21px;
@@ -36,7 +36,7 @@
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  margin-bottom: 25px;
+  margin: 57px 0 25px;
   font-family: $ff-montserrat;
 
   @include vp-1023() {

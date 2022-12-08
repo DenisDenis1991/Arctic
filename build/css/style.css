@@ -838,6 +838,8 @@ button,
   padding: 0;
   list-style: none;
   color: #f9fbfd;
+  max-height: 216px;
+  overflow: scroll;
 }
 
 .product-cruise__list li:not(:last-child) {
@@ -962,13 +964,13 @@ button,
   display: grid;
   -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
   -webkit-column-gap: 40px;
   -moz-column-gap: 40px;
   column-gap: 40px;
   padding: 116px 0 145px;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
 }
 
 .about__img {
@@ -984,7 +986,7 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  margin-bottom: 25px;
+  margin: 57px 0 25px;
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
@@ -1093,11 +1095,10 @@ button,
 .contact__description {
   margin: 0;
   padding: 0;
-  margin-left: 56px;
   font-weight: 500;
   font-size: 18px;
   line-height: 27px;
-  margin-bottom: 32px;
+  margin: 10px 0 32px 56px;
 }
 
 .contact__address {
@@ -1135,6 +1136,7 @@ button,
   align-items: center;
   gap: 10px;
   margin-left: 56px;
+  padding-bottom: 10px;
 }
 
 .contact__tel::before {
@@ -1183,7 +1185,8 @@ button,
   content: "";
   display: block;
   width: 100%;
-  height: 555px;
+  min-height: 555px;
+  height: 100%;
   position: absolute;
   background-color: #bddefb;
   background-repeat: no-repeat;
@@ -1207,7 +1210,7 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   padding: 45px 50px;
-  margin-left: 125px;
+  margin-top: 5px;
 }
 
 .form__contact input {
@@ -1250,8 +1253,8 @@ button,
 .form__wrapper {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  -ms-grid-columns: 1fr 403px;
+  grid-template-columns: 1fr 403px;
   padding: 0 60px 0 42px;
   -webkit-box-align: center;
   -ms-flex-align: center;
@@ -1343,7 +1346,8 @@ input[type=checkbox]:focus + .form__approv-icon {
 }
 
 .intro {
-  padding: 191px 0 286px;
+  padding: 271px 0 283px;
+  position: relative;
 }
 
 .intro::after {
@@ -1353,13 +1357,12 @@ input[type=checkbox]:focus + .form__approv-icon {
   display: block;
   width: 100%;
   top: 0;
-  height: 650px;
+  min-height: 650px;
+  height: 100%;
   z-index: -1;
   background-color: #bddefb;
   background-repeat: no-repeat;
   background-size: cover;
-  -webkit-filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
-  filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
 }
 
 .intro__heading {
@@ -1475,6 +1478,9 @@ input[type=checkbox]:focus + .form__approv-icon {
 
 .page__header {
   padding-top: 35px;
+  width: 100%;
+  position: absolute;
+  z-index: 1;
 }
 
 /* @mixin hover-focus {
@@ -1732,6 +1738,7 @@ input[type=checkbox]:focus + .form__approv-icon {
   .form form {
     margin: 0 137px;
     padding: 45px 50px 50px;
+    margin-top: 0;
   }
 
   .form__wrapper {
@@ -1766,7 +1773,7 @@ input[type=checkbox]:focus + .form__approv-icon {
   }
 
   .intro::after {
-    height: 638px;
+    min-height: 638px;
     top: 0;
     -webkit-filter: none;
     filter: none;
@@ -1931,6 +1938,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     position: absolute;
     z-index: 9;
     min-width: 320px;
+    overflow: scroll;
   }
 
   .header__box--menu .header__box-mobile {
@@ -1958,9 +1966,12 @@ input[type=checkbox]:focus + .form__approv-icon {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
     gap: 0;
     background-color: #f9fbfd;
     padding: 26px 30px 0 15px;
+    min-height: 268px;
     height: 100%;
     width: 100%;
     margin-left: 0;
@@ -1987,6 +1998,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     width: 24px;
     height: 14px;
     background-image: url("./../img/svg/menu.svg");
+    background-repeat: no-repeat;
   }
 
   .header__button--close {
@@ -2146,7 +2158,7 @@ input[type=checkbox]:focus + .form__approv-icon {
   }
 
   .intro::after {
-    height: 500px;
+    min-height: 500px;
     background-image: url("./../img/pic/intro-bg-mobile.webp");
   }
 
