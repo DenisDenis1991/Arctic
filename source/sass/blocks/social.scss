@@ -1,12 +1,13 @@
 .social {
   @include list-reset();
   display: flex;
-  justify-content: space-between;
   margin-right: -8px;
   flex-wrap: wrap;
+  max-width: 140px;
 
   @include vp-1023() {
     margin-top: -5px;
+    max-width: 120px;
   }
 
   @include vp-767() {

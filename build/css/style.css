@@ -775,15 +775,12 @@ button,
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 386px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: end;
-  padding-top: 100%;
+  -webkit-box-align: end;
+  -ms-flex-align: end;
+  align-items: flex-end;
+  width: 100%;
+  aspect-ratio: 260/386;
+  overflow: hidden;
 }
 
 .product-cruise:hover {
@@ -824,6 +821,13 @@ button,
   width: 100%;
 }
 
+.product-cruise__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
 .product-cruise__box {
   display: none;
   padding: 30px 25px 33px;
@@ -838,8 +842,8 @@ button,
   padding: 0;
   list-style: none;
   color: #f9fbfd;
-  max-height: 216px;
-  overflow: scroll;
+  max-height: 240px;
+  overflow-y: auto;
 }
 
 .product-cruise__list li:not(:last-child) {
@@ -909,6 +913,10 @@ button,
   flex-wrap: wrap;
   position: relative;
   max-width: 800px;
+}
+
+.user-nav__list--footer {
+  max-width: 600px;
 }
 
 .user-nav__link {
@@ -986,7 +994,8 @@ button,
   font-weight: 600;
   font-size: 28px;
   line-height: 42px;
-  margin: 57px 0 25px;
+  margin-top: 57px;
+  margin-bottom: 25px;
   font-family: "Montserrat", "Arial", sans-serif;
 }
 
@@ -1136,7 +1145,8 @@ button,
   align-items: center;
   gap: 10px;
   margin-left: 56px;
-  padding-bottom: 10px;
+  margin-bottom: 15px;
+  width: 200px;
 }
 
 .contact__tel::before {
@@ -1210,7 +1220,6 @@ button,
   -ms-flex-pack: center;
   justify-content: center;
   padding: 45px 50px;
-  margin-top: 5px;
 }
 
 .form__contact input {
@@ -1455,12 +1464,10 @@ input[type=checkbox]:focus + .form__approv-icon {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
   margin-right: -8px;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
+  max-width: 140px;
 }
 
 .social__link {
@@ -1574,6 +1581,10 @@ input[type=checkbox]:focus + .form__approv-icon {
     padding: 0 45px;
   }
 
+  .product-cruise {
+    aspect-ratio: 311/386;
+  }
+
   .product-cruise__box {
     padding: 30px 35px 33px;
   }
@@ -1615,7 +1626,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     -webkit-column-gap: 21px;
     -moz-column-gap: 21px;
     column-gap: 21px;
-    padding: 85px 0 92px;
+    padding: 94px 0 92px;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
@@ -1629,6 +1640,7 @@ input[type=checkbox]:focus + .form__approv-icon {
     font-size: 26px;
     line-height: 36px;
     margin-bottom: 16px;
+    margin-top: 0;
   }
 
   .advantages {
@@ -1738,7 +1750,6 @@ input[type=checkbox]:focus + .form__approv-icon {
   .form form {
     margin: 0 137px;
     padding: 45px 50px 50px;
-    margin-top: 0;
   }
 
   .form__wrapper {
@@ -1769,7 +1780,7 @@ input[type=checkbox]:focus + .form__approv-icon {
   }
 
   .intro {
-    padding: 212px 0 283px;
+    padding: 269px 0 274px;
   }
 
   .intro::after {
@@ -1808,6 +1819,7 @@ input[type=checkbox]:focus + .form__approv-icon {
 
   .social {
     margin-top: -5px;
+    max-width: 120px;
   }
 
   .social__link {
@@ -1856,6 +1868,10 @@ input[type=checkbox]:focus + .form__approv-icon {
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .product-cruise {
+    aspect-ratio: 270/386;
   }
 
   .product-cruise__box {
@@ -2005,12 +2021,13 @@ input[type=checkbox]:focus + .form__approv-icon {
     width: 15px;
     height: 14px;
     background-image: url("./../img/svg/close.svg");
+    background-repeat: no-repeat;
   }
 
   .about {
     -ms-grid-columns: 1fr;
     grid-template-columns: 1fr;
-    padding: 50px 0 86px;
+    padding: 57px 0 86px;
   }
 
   .about__img {
@@ -2052,8 +2069,8 @@ input[type=checkbox]:focus + .form__approv-icon {
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
-    padding: 59px 0 65px;
-    gap: 35px;
+    padding: 50px 0 64px;
+    gap: 20px;
   }
 
   .contact__map {
@@ -2154,7 +2171,7 @@ input[type=checkbox]:focus + .form__approv-icon {
   }
 
   .intro {
-    padding: 128px 0 187px;
+    padding: 175px 0 181px;
   }
 
   .intro::after {

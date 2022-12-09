@@ -20,7 +20,7 @@ window.addEventListener('DOMContentLoaded', () => {
   initMenu();
 
   const input = document.getElementsByName('phone');
-  input.style.minlength = '11';
+  const formBtn = document.querySelector('.form__btn');
   const prefixNumber = (str) => {
     if (str === '7') {
       return '7 (';
@@ -37,7 +37,7 @@ window.addEventListener('DOMContentLoaded', () => {
   input.forEach((element) => element.addEventListener('input', () => {
     const value = element.value.replace(/\D+/g, '');
     const numberLength = 11;
-
+    const minLength = 18;
     let result;
     if (element.value.includes('+8') || element.value[0] === '8') {
       result = '';
@@ -65,6 +65,11 @@ window.addEventListener('DOMContentLoaded', () => {
       result += value[i];
     }
     element.value = result;
+    if (element.value.length !== minLength) {
+      formBtn.disabled = true;
+    } else {
+      formBtn.disabled = false;
+    }
   })
   );
 

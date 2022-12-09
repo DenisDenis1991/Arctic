@@ -3,11 +3,11 @@
   position: relative;
 
   @include vp-1023() {
-    padding: 212px 0 283px;
+    padding: 269px 0 274px;
   }
 
   @include vp-767() {
-    padding: 128px 0 187px;
+    padding: 175px 0 181px;
   }
 
   &::after {

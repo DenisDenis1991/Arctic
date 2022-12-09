@@ -1,10 +1,18 @@
 .product-cruise {
   position: relative;
   display: flex;
-  height: 386px;
-  flex-direction: column;
-  justify-content: end;
-  padding-top: 100%;
+  align-items: flex-end;
+  width: 100%;
+  aspect-ratio: 260/386;
+  overflow: hidden;
+
+  @include vp-1023() {
+    aspect-ratio: 311/386;
+  }
+
+  @include vp-767() {
+    aspect-ratio: 270/386;
+  }
 
   &:hover {
     display: block;
@@ -36,6 +44,12 @@
   top: 0;
   height: 100%;
   width: 100%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
 }
 
 .product-cruise__box {
@@ -58,8 +72,8 @@
 .product-cruise__list {
   @include list-reset();
   color: $alice-blue;
-  max-height: 216px;
-  overflow: scroll;
+  max-height: 240px;
+  overflow-y: auto;
 
   & li:not(:last-child) {
     margin-bottom: 12px;

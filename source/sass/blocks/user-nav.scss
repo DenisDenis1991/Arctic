@@ -35,6 +35,8 @@
   }
 
   &--footer {
+    max-width: 600px;
+
     @include vp-1023() {
       max-width: 500px;
     }
