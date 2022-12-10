@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Modules
   // ---------------------------------
-  initJs();
+  // initJs();
 
   initMenu();
 
